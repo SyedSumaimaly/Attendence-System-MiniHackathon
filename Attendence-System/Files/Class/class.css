@@ -28,6 +28,7 @@
     width: 90%;
     position: absolute;
     top: 30%;
+    display: flex;
     justify-content: center;
 }
 
@@ -36,4 +37,37 @@
     padding: 1%;
     border-radius: 20px;
     font-weight: 560;
+}
+
+@media screen and (min-width: 1060px){
+    .btn_add {
+        width: 90%;
+        position: absolute;
+        top: 40%;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 870px){
+    .btn_add {
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 428px){
+    .btn_add {
+        width: 90%;
+        position: absolute;
+        top: 70%;
+        display: flex;
+        justify-content: center;
+    }
+    
 }
