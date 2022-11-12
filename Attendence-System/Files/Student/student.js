@@ -40,9 +40,7 @@ const submitStudent = async () => {
             Cnic: Cnic_Number.value,
             Course: CourseName.value,
             Class: ClassAssign.value,
-            Picture: imageSrc,
         });
-        const imageSrc = changingImageToURL(Img.files[0]);
     } catch (e) {
         console.error("Error adding document:", e);
     }
@@ -56,15 +54,3 @@ backDashboard.addEventListener("click", () => {
     event.preventDefault();
     window.location = "../dashboard.html"
 })
-
-const myData = () => {
-    const q = query(collection(db, "classes"), where("Timing", "==", Timing));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            classAssign.innerHTML += `
-
-            <option value="${doc.data().Instrustor + doc.data().Timing + doc.data().Batch}">${doc.data().Instrustor + doc.data().Timing + doc.data().Batch}</option>
-          `
-        });
-    });
-}

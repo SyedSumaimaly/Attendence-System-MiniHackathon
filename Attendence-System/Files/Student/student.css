@@ -1,42 +1,51 @@
 .form {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
-    width: 70%;
-    border: 2px solid red;
+    width: 100%;
     position: absolute;
     margin: 0% auto;
     justify-content: space-around;
     padding: 5%;
+
+}
+
+body{
+    background-color: rgb(78, 181, 233) !important;
 }
 
 .formcontent {
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 
 .group input {
     margin: 10px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .group label {
     color: black;
-    font-size: 18px;
-    font-weight: 560;
+    font-size: 20px;
+    font-weight: 630;
 }
 
 .btn_add {
     width: 90%;
-    position: absolute;
-    top: 90%;
-    justify-content: center;
+    /* position: absolute;
+    top: 90%; */
+    justify-content: left;
     display: flex;
     position: absolute;
 }
 
 .btn_add button {
-    width: 70%;
+    width: 95%;
     padding: 1%;
-    border-radius: 20px;
-    font-weight: 560;
+    border-radius: 10px;
+    font-weight:560;
+    margin-top: 1%;
 }
