@@ -8,6 +8,10 @@
     padding: 5%;
 }
 
+body{
+    background-color: rgb(78, 181, 233) !important;
+}
+
 .formcontent {
     width: 100%;
     display: flex;
