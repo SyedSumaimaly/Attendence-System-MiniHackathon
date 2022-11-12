@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-import { collection, addDoc, doc, setDoc, getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+import { collection, addDoc, getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -12,6 +12,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
@@ -21,7 +23,6 @@ const SectionName = document.getElementById("SectionName");
 const CourseName = document.getElementById("CourseName");
 const BatchNumber = document.getElementById("BatchNumber");
 const ScheduleName = document.getElementById("ScheduleName");
-
 
 
 const submitClass = async () => {

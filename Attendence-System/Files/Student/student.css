@@ -1,0 +1,42 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    border: 2px solid red;
+    position: absolute;
+    margin: 0% auto;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.formcontent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.group input {
+    margin: 10px;
+}
+
+.group label {
+    color: black;
+    font-size: 18px;
+    font-weight: 560;
+}
+
+.btn_add {
+    width: 90%;
+    position: absolute;
+    top: 90%;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+}
+
+.btn_add button {
+    width: 70%;
+    padding: 1%;
+    border-radius: 20px;
+    font-weight: 560;
+}
