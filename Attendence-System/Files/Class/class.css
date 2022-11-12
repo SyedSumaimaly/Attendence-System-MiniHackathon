@@ -1,0 +1,39 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    position: absolute;
+    margin: 0% auto;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.formcontent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.group input {
+    margin: 10px;
+}
+
+.group label {
+    color: black;
+    font-size: 18px;
+    font-weight: 560;
+}
+
+.btn_add {
+    width: 90%;
+    position: absolute;
+    top: 30%;
+    justify-content: center;
+}
+
+.btn_add button {
+    width: 100%;
+    padding: 1%;
+    border-radius: 20px;
+    font-weight: 560;
+}
