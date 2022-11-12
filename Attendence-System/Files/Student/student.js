@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-import { collection, addDoc, getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+import { collection, addDoc, getDoc, getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,6 +17,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
 
 const Name = document.getElementById("Sname");
 const FatherName = document.getElementById("Fname");
@@ -38,9 +40,11 @@ const submitStudent = async () => {
             Cnic: Cnic_Number.value,
             Course: CourseName.value,
             Class: ClassAssign.value,
+            Picture: imageSrc,
         });
+        const imageSrc = changingImageToURL(Img.files[0]);
     } catch (e) {
-        console.error("Error adding document: ", e);
+        console.error("Error adding document:", e);
     }
 }
 
@@ -52,3 +56,15 @@ backDashboard.addEventListener("click", () => {
     event.preventDefault();
     window.location = "../dashboard.html"
 })
+
+const myData = () => {
+    const q = query(collection(db, "classes"), where("Timing", "==", Timing));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            classAssign.innerHTML += `
+
+            <option value="${doc.data().Instrustor + doc.data().Timing + doc.data().Batch}">${doc.data().Instrustor + doc.data().Timing + doc.data().Batch}</option>
+          `
+        });
+    });
+}
